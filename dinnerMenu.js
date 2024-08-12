@@ -151,7 +151,7 @@ function validarPlatos(arrayPlatos, platoElegido) {
     const arrayLimpio = arrayPlatos.map(str => str.replace(/[^a-z]/gi, '').trim().toLowerCase());
     
     while (!validez){
-        platoElegido = platoElegido.trim().replace(/\W/g, "").toLowerCase();
+        platoElegido = platoElegido.replace(/^[a-z]/gi, '').trim().toLowerCase();
         while (i < arrayLimpio.length && arrayLimpio[i] != platoElegido) {
             i++;
         }
